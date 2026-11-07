@@ -1,0 +1,4 @@
+target/
+__MACOSX/
+.idea/
+.DS_Store
