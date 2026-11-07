@@ -1,0 +1,6 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< mn.edu.must.sqat:lab09-jacoco >--------------------
+[INFO] Building lab09-jacoco 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
