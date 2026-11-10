@@ -35,4 +35,13 @@ class ScholarshipCalculatorTest {
     // ---- Part C: loop boundary (0 / 1 / 2+) ----
     @Test void gpa_singleScore_isFour() { assertEquals(4.0, calc.gpa(new double[]{95}), 0.0001); }
     @Test void gpa_manyScores_isTwoPointFive() { assertEquals(2.5, calc.gpa(new double[]{95, 85, 75, 65}), 0.0001); }
+
+    // ---- Part D: boundary values for letterGrade ----
+    @Test void letterGrade_60_isD() { assertEquals("D", calc.letterGrade(60)); }
+    @Test void letterGrade_59_99_isF() { assertEquals("F", calc.letterGrade(59.99)); }
+    @Test void letterGrade_69_99_isD() { assertEquals("D", calc.letterGrade(69.99)); }
+    @Test void letterGrade_0_isF() { assertEquals("F", calc.letterGrade(0)); }
+    @Test void letterGrade_100_isA() { assertEquals("A", calc.letterGrade(100)); }
+    @Test void letterGrade_89_99_isB() { assertEquals("B", calc.letterGrade(89.99)); }
+    @Test void letterGrade_90_isA() { assertEquals("A", calc.letterGrade(90)); }
 }
