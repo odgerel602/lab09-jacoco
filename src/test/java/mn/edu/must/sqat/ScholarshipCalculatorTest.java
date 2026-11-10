@@ -31,4 +31,8 @@ class ScholarshipCalculatorTest {
     @Test void scholarship_gpa34_lowCredits_is50() { assertEquals(50, calc.scholarship(3.5, 11, false)); }
     @Test void scholarship_gpa32_is50() { assertEquals(50, calc.scholarship(3.2, 20, false)); }
     @Test void scholarship_lowGpa_is0() { assertEquals(0, calc.scholarship(2.5, 20, false)); }
+
+    // ---- Part C: loop boundary (0 / 1 / 2+) ----
+    @Test void gpa_singleScore_isFour() { assertEquals(4.0, calc.gpa(new double[]{95}), 0.0001); }
+    @Test void gpa_manyScores_isTwoPointFive() { assertEquals(2.5, calc.gpa(new double[]{95, 85, 75, 65}), 0.0001); }
 }
